@@ -1,0 +1,13 @@
+C:\Users\Matias\Documents\GitHub\Prestamos\PrestamosEjercicio\PrestamosEjercicio\bin\Debug\PrestamosEjercicio.exe.config
+C:\Users\Matias\Documents\GitHub\Prestamos\PrestamosEjercicio\PrestamosEjercicio\bin\Debug\PrestamosEjercicio.exe
+C:\Users\Matias\Documents\GitHub\Prestamos\PrestamosEjercicio\PrestamosEjercicio\bin\Debug\PrestamosEjercicio.pdb
+C:\Users\Matias\Documents\GitHub\Prestamos\PrestamosEjercicio\PrestamosEjercicio\obj\Debug\PrestamosEjercicio.csprojAssemblyReference.cache
+C:\Users\Matias\Documents\GitHub\Prestamos\PrestamosEjercicio\PrestamosEjercicio\obj\Debug\PrestamosEjercicio.Form1.resources
+C:\Users\Matias\Documents\GitHub\Prestamos\PrestamosEjercicio\PrestamosEjercicio\obj\Debug\PrestamosEjercicio.Properties.Resources.resources
+C:\Users\Matias\Documents\GitHub\Prestamos\PrestamosEjercicio\PrestamosEjercicio\obj\Debug\PrestamosEjercicio.csproj.GenerateResource.cache
+C:\Users\Matias\Documents\GitHub\Prestamos\PrestamosEjercicio\PrestamosEjercicio\obj\Debug\PrestamosEjercicio.csproj.CoreCompileInputs.cache
+C:\Users\Matias\Documents\GitHub\Prestamos\PrestamosEjercicio\PrestamosEjercicio\obj\Debug\PrestamosEjercicio.exe
+C:\Users\Matias\Documents\GitHub\Prestamos\PrestamosEjercicio\PrestamosEjercicio\obj\Debug\PrestamosEjercicio.pdb
+C:\Users\Matias\Documents\GitHub\Prestamos\PrestamosEjercicio\PrestamosEjercicio\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Matias\Documents\GitHub\Prestamos\PrestamosEjercicio\PrestamosEjercicio\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Matias\Documents\GitHub\Prestamos\PrestamosEjercicio\PrestamosEjercicio\obj\Debug\PrestamosEjercicio.csproj.CopyComplete
