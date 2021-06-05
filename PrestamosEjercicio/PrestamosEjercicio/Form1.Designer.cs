@@ -72,6 +72,7 @@ namespace PrestamosEjercicio
             this.lstTipoPrestamos.Name = "lstTipoPrestamos";
             this.lstTipoPrestamos.Size = new System.Drawing.Size(222, 316);
             this.lstTipoPrestamos.TabIndex = 1;
+            this.lstTipoPrestamos.SelectedIndexChanged += new System.EventHandler(this.lstTipoPrestamos_SelectedIndexChanged);
             // 
             // lblLinea
             // 
@@ -129,6 +130,7 @@ namespace PrestamosEjercicio
             // 
             // txtLinea
             // 
+            this.txtLinea.Enabled = false;
             this.txtLinea.Location = new System.Drawing.Point(335, 23);
             this.txtLinea.Name = "txtLinea";
             this.txtLinea.Size = new System.Drawing.Size(100, 20);
@@ -136,6 +138,7 @@ namespace PrestamosEjercicio
             // 
             // txtTNA
             // 
+            this.txtTNA.Enabled = false;
             this.txtTNA.Location = new System.Drawing.Point(335, 65);
             this.txtTNA.Name = "txtTNA";
             this.txtTNA.Size = new System.Drawing.Size(101, 20);

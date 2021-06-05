@@ -1,4 +1,5 @@
 ﻿using PrestamosEjercicio.CapaNegocio;
+using PrestamosEjercicio.Entidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,6 +30,15 @@ namespace PrestamosEjercicio
         private void Form1_Load(object sender, EventArgs e)
         {
             lstTipoPrestamos.DataSource = negocioTipoPrestamo.getAllTipoPrestamo();
+        }
+
+        private void lstTipoPrestamos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TipoPrestamo tipo = (TipoPrestamo)lstTipoPrestamos.SelectedItem;
+
+            txtTNA.Text = tipo.TNA.ToString();
+            txtLinea.Text = tipo.Linea.ToString();
+
         }
     }
 }
