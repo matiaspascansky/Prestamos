@@ -54,6 +54,7 @@ namespace PrestamosEjercicio
             this.txtComision = new System.Windows.Forms.TextBox();
             this.txtId = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -115,7 +116,7 @@ namespace PrestamosEjercicio
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(240, 275);
+            this.label6.Location = new System.Drawing.Point(234, 329);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(76, 13);
             this.label6.TabIndex = 6;
@@ -124,7 +125,7 @@ namespace PrestamosEjercicio
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(240, 316);
+            this.label7.Location = new System.Drawing.Point(234, 371);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(76, 13);
             this.label7.TabIndex = 7;
@@ -162,9 +163,9 @@ namespace PrestamosEjercicio
             // 
             // btnSimular
             // 
-            this.btnSimular.Location = new System.Drawing.Point(269, 206);
+            this.btnSimular.Location = new System.Drawing.Point(237, 237);
             this.btnSimular.Name = "btnSimular";
-            this.btnSimular.Size = new System.Drawing.Size(150, 48);
+            this.btnSimular.Size = new System.Drawing.Size(119, 48);
             this.btnSimular.TabIndex = 12;
             this.btnSimular.Text = "SIMULAR";
             this.btnSimular.UseVisualStyleBackColor = true;
@@ -173,7 +174,7 @@ namespace PrestamosEjercicio
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(246, 356);
+            this.label2.Location = new System.Drawing.Point(234, 403);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 13);
             this.label2.TabIndex = 13;
@@ -182,7 +183,7 @@ namespace PrestamosEjercicio
             // txtCuotaCapital
             // 
             this.txtCuotaCapital.Enabled = false;
-            this.txtCuotaCapital.Location = new System.Drawing.Point(376, 275);
+            this.txtCuotaCapital.Location = new System.Drawing.Point(340, 329);
             this.txtCuotaCapital.Name = "txtCuotaCapital";
             this.txtCuotaCapital.Size = new System.Drawing.Size(100, 20);
             this.txtCuotaCapital.TabIndex = 14;
@@ -191,7 +192,7 @@ namespace PrestamosEjercicio
             // txtCuotaInteres
             // 
             this.txtCuotaInteres.Enabled = false;
-            this.txtCuotaInteres.Location = new System.Drawing.Point(376, 313);
+            this.txtCuotaInteres.Location = new System.Drawing.Point(340, 368);
             this.txtCuotaInteres.Name = "txtCuotaInteres";
             this.txtCuotaInteres.Size = new System.Drawing.Size(100, 20);
             this.txtCuotaInteres.TabIndex = 15;
@@ -199,14 +200,14 @@ namespace PrestamosEjercicio
             // txtCuotaTotal
             // 
             this.txtCuotaTotal.Enabled = false;
-            this.txtCuotaTotal.Location = new System.Drawing.Point(376, 353);
+            this.txtCuotaTotal.Location = new System.Drawing.Point(340, 400);
             this.txtCuotaTotal.Name = "txtCuotaTotal";
             this.txtCuotaTotal.Size = new System.Drawing.Size(100, 20);
             this.txtCuotaTotal.TabIndex = 16;
             // 
             // btnAlta
             // 
-            this.btnAlta.Location = new System.Drawing.Point(277, 403);
+            this.btnAlta.Location = new System.Drawing.Point(269, 447);
             this.btnAlta.Name = "btnAlta";
             this.btnAlta.Size = new System.Drawing.Size(142, 45);
             this.btnAlta.TabIndex = 17;
@@ -225,6 +226,7 @@ namespace PrestamosEjercicio
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnLimpiar);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txtId);
             this.groupBox1.Controls.Add(this.btnAlta);
@@ -292,6 +294,16 @@ namespace PrestamosEjercicio
             this.label5.TabIndex = 19;
             this.label5.Text = "ID";
             // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Location = new System.Drawing.Point(365, 237);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(100, 48);
+            this.btnLimpiar.TabIndex = 20;
+            this.btnLimpiar.Text = "Limpiar Campos";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.txtLimpiar_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -340,6 +352,7 @@ namespace PrestamosEjercicio
         private System.Windows.Forms.TextBox txtComision;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.Button btnLimpiar;
     }
 }
 

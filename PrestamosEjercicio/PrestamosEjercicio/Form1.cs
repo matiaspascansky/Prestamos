@@ -82,6 +82,17 @@ namespace PrestamosEjercicio
             return valido;
         }
 
-
+        private void txtLimpiar_Click(object sender, EventArgs e)
+        {
+            txtComision.Text = "";
+            txtCuotaCapital.Text = "";
+            txtCuotaInteres.Text = "";
+            txtId.Text = "";
+            txtLinea.Text = "";
+            txtMonto.Text = "";
+            txtPlazo.Text = "";
+            txtTNA.Text = "";
+            txtCuotaTotal.Text = "";
+        }
     }
 }
