@@ -43,15 +43,17 @@ namespace PrestamosEjercicio
             this.txtPlazo = new System.Windows.Forms.TextBox();
             this.btnSimular = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtCuotaCapital = new System.Windows.Forms.TextBox();
+            this.txtCuotaInteres = new System.Windows.Forms.TextBox();
+            this.txtCuotaTotal = new System.Windows.Forms.TextBox();
             this.btnAlta = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lstPrestamos = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtComision = new System.Windows.Forms.TextBox();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -160,12 +162,13 @@ namespace PrestamosEjercicio
             // 
             // btnSimular
             // 
-            this.btnSimular.Location = new System.Drawing.Point(270, 196);
+            this.btnSimular.Location = new System.Drawing.Point(269, 206);
             this.btnSimular.Name = "btnSimular";
             this.btnSimular.Size = new System.Drawing.Size(150, 48);
             this.btnSimular.TabIndex = 12;
             this.btnSimular.Text = "SIMULAR";
             this.btnSimular.UseVisualStyleBackColor = true;
+            this.btnSimular.Click += new System.EventHandler(this.btnSimular_Click);
             // 
             // label2
             // 
@@ -176,27 +179,30 @@ namespace PrestamosEjercicio
             this.label2.TabIndex = 13;
             this.label2.Text = "CUOTA TOTAL";
             // 
-            // textBox1
+            // txtCuotaCapital
             // 
-            this.textBox1.Location = new System.Drawing.Point(376, 275);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 14;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtCuotaCapital.Enabled = false;
+            this.txtCuotaCapital.Location = new System.Drawing.Point(376, 275);
+            this.txtCuotaCapital.Name = "txtCuotaCapital";
+            this.txtCuotaCapital.Size = new System.Drawing.Size(100, 20);
+            this.txtCuotaCapital.TabIndex = 14;
+            this.txtCuotaCapital.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox2
+            // txtCuotaInteres
             // 
-            this.textBox2.Location = new System.Drawing.Point(376, 313);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 15;
+            this.txtCuotaInteres.Enabled = false;
+            this.txtCuotaInteres.Location = new System.Drawing.Point(376, 313);
+            this.txtCuotaInteres.Name = "txtCuotaInteres";
+            this.txtCuotaInteres.Size = new System.Drawing.Size(100, 20);
+            this.txtCuotaInteres.TabIndex = 15;
             // 
-            // textBox3
+            // txtCuotaTotal
             // 
-            this.textBox3.Location = new System.Drawing.Point(376, 353);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 16;
+            this.txtCuotaTotal.Enabled = false;
+            this.txtCuotaTotal.Location = new System.Drawing.Point(376, 353);
+            this.txtCuotaTotal.Name = "txtCuotaTotal";
+            this.txtCuotaTotal.Size = new System.Drawing.Size(100, 20);
+            this.txtCuotaTotal.TabIndex = 16;
             // 
             // btnAlta
             // 
@@ -219,10 +225,12 @@ namespace PrestamosEjercicio
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.txtId);
             this.groupBox1.Controls.Add(this.btnAlta);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtCuotaTotal);
+            this.groupBox1.Controls.Add(this.txtCuotaInteres);
+            this.groupBox1.Controls.Add(this.txtCuotaCapital);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.btnSimular);
             this.groupBox1.Controls.Add(this.txtPlazo);
@@ -268,6 +276,22 @@ namespace PrestamosEjercicio
             this.txtComision.Size = new System.Drawing.Size(158, 20);
             this.txtComision.TabIndex = 22;
             // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(336, 180);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(43, 20);
+            this.txtId.TabIndex = 18;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(246, 183);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(18, 13);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "ID";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -305,15 +329,17 @@ namespace PrestamosEjercicio
         private System.Windows.Forms.TextBox txtPlazo;
         private System.Windows.Forms.Button btnSimular;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtCuotaCapital;
+        private System.Windows.Forms.TextBox txtCuotaInteres;
+        private System.Windows.Forms.TextBox txtCuotaTotal;
         private System.Windows.Forms.Button btnAlta;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ListBox lstPrestamos;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtComision;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtId;
     }
 }
 

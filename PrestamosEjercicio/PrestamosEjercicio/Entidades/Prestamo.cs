@@ -45,6 +45,11 @@ namespace PrestamosEjercicio.Entidades
             return CuotaCapital() * (TNA1 / 12 / 100);
         }
 
+        public double Cuota()
+        {
+            return CuotaCapital() + CuotaInteres();
+        }
+
 
     }
 }
