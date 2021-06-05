@@ -213,6 +213,7 @@ namespace PrestamosEjercicio
             this.btnAlta.TabIndex = 17;
             this.btnAlta.Text = "ALTA";
             this.btnAlta.UseVisualStyleBackColor = true;
+            this.btnAlta.Click += new System.EventHandler(this.btnAlta_Click);
             // 
             // label3
             // 
@@ -259,6 +260,7 @@ namespace PrestamosEjercicio
             this.lstPrestamos.Name = "lstPrestamos";
             this.lstPrestamos.Size = new System.Drawing.Size(321, 316);
             this.lstPrestamos.TabIndex = 20;
+            this.lstPrestamos.SelectedIndexChanged += new System.EventHandler(this.lstPrestamos_SelectedIndexChanged);
             // 
             // label4
             // 
