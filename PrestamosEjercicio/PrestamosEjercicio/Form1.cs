@@ -57,8 +57,7 @@ namespace PrestamosEjercicio
                 double monto = double.Parse(txtMonto.Text);
                 int plazo = int.Parse(txtPlazo.Text);
                 string usuario = "matias";
-                int idCliente = int.Parse(txtIdCliente.Text);
-                Prestamo p = new Prestamo(linea, tna, plazo, monto, usuario, tipo, idCliente);
+                Prestamo p = new Prestamo(linea, tna, plazo, monto, usuario, tipo);
 
                 txtCuotaCapital.Text = p.CuotaCapital().ToString();
                 txtCuotaInteres.Text = p.CuotaInteres().ToString();
@@ -73,7 +72,7 @@ namespace PrestamosEjercicio
         private bool validarForm()
         {
             bool valido = false;
-            if(txtLinea.Text == "" || txtMonto.Text == "" || txtPlazo.Text == "" || txtTNA.Text == "" || txtIdCliente.Text == "")
+            if(txtLinea.Text == "" || txtMonto.Text == "" || txtPlazo.Text == "" || txtTNA.Text == "")
             {
                 valido = false;
             } else
@@ -89,7 +88,6 @@ namespace PrestamosEjercicio
             txtComision.Text = "";
             txtCuotaCapital.Text = "";
             txtCuotaInteres.Text = "";
-            txtIdCliente.Text = "";
             txtLinea.Text = "";
             txtMonto.Text = "";
             txtPlazo.Text = "";
@@ -107,12 +105,9 @@ namespace PrestamosEjercicio
                 int plazo = int.Parse(txtPlazo.Text);
                 string usuario = "matias";
                
-                int idCliente = int.Parse(txtIdCliente.Text);
+                Prestamo p = new Prestamo(linea, tna, plazo, monto, usuario, tipo);
 
-                tipo = new TipoPrestamo(linea, tna);
-                Prestamo p = new Prestamo(linea, tna, plazo, monto, usuario, tipo, idCliente);
-
-                TransactionResult tr = negocio.insertar(tna, linea, plazo, idCliente, monto, usuario, tipo);
+                TransactionResult tr = negocio.insertar(tna, linea, plazo, monto, usuario, tipo);
             } catch (PrestamoExistenteException ex)
             {
                 MessageBox.Show(ex.Message);

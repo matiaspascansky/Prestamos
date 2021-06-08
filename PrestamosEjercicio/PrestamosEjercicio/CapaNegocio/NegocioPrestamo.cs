@@ -26,21 +26,26 @@ namespace PrestamosEjercicio.CapaNegocio
             return mapper.TraerPrestamos();
         }
 
-        public TransactionResult insertar(double tna, string linea, int plazo, int idCliente, double monto, string usuario, TipoPrestamo tipo)
+        public TransactionResult insertar(double tna, string linea, int plazo, double monto, string usuario, TipoPrestamo tipo)
         {
-            Prestamo prestamo = new Prestamo(linea, tna, plazo, monto, usuario, tipo, idCliente);
+            Prestamo prestamo = new Prestamo(linea, tna, plazo, monto, usuario, tipo);
            // buscarRepetido(prestamo);
             return mapper.Insertar(prestamo);
         }
 
         private void buscarRepetido(Prestamo pres)
         {
-            Prestamo p = mapper.TraerPorCodigo(pres.IdCliente);
+            List<Prestamo> prestamos = mapper.TraerPorLegajo(887758);
 
-            if (p != null)
+            foreach (Prestamo p in prestamos)
             {
-                throw new PrestamoExistenteException("Prestamo ya registrado");
+                if(p == pres)
+                {
+                    throw new PrestamoExistenteException("Prestamo ya registrado");
+                }
             }
+          
+            
         }
     }
 

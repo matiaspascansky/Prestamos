@@ -12,9 +12,10 @@ namespace PrestamosEjercicio.Entidades
         private double tna;
         private int id;
 
-        public TipoPrestamo(string linea, double tna)
+        public TipoPrestamo(string linea, double tna, int id)
         {
             this.linea = linea;
+            this.id = id;
             this.tna = tna;
         }
 

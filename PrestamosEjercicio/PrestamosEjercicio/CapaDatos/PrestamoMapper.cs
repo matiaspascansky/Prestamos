@@ -19,11 +19,11 @@ namespace PrestamosEjercicio.CapaDatos
             return lst;
         }
 
-        public Prestamo TraerPorCodigo(int codigo)
+        public List<Prestamo> TraerPorLegajo(int legajo = 887758)
         {
-            string jsons = WebHelper.Get("prestamo/" + codigo.ToString());
-            Prestamo p = JsonConvert.DeserializeObject<Prestamo>(jsons);
-            return p;
+            string jsons = WebHelper.Get("prestamo/" + legajo.ToString());
+            List<Prestamo> lst = MapList(jsons);
+            return lst;
         }
 
         public TransactionResult Insertar(Prestamo prestamo)
@@ -52,11 +52,14 @@ namespace PrestamosEjercicio.CapaDatos
         private NameValueCollection ReverseMap(Prestamo prestamo)
         {
             NameValueCollection p = new NameValueCollection();
-            p.Add("idCliente", prestamo.IdCliente.ToString());
-            p.Add("Linea", prestamo.Linea.ToString());
-            p.Add("TNA", prestamo.TNA1.ToString());
+            p.Add("TNA", prestamo.TNA1.ToString("0.00"));
             p.Add("Plazo", prestamo.Plazo.ToString());
-            p.Add("idTipo", prestamo.Plazo.ToString());
+            p.Add("idTipo", prestamo.Tipo.Id.ToString());
+            p.Add("Monto", prestamo.Monto.ToString("0.00"));
+            p.Add("Cuota", prestamo.Cuota().ToString("0.00"));
+            p.Add("Usuario", "887758");
+            p.Add("Linea", prestamo.Linea.ToString());
+
 
             return p;
         }
