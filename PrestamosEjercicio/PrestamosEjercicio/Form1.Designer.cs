@@ -49,12 +49,12 @@ namespace PrestamosEjercicio
             this.btnAlta = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtIdCliente = new System.Windows.Forms.TextBox();
             this.lstPrestamos = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtComision = new System.Windows.Forms.TextBox();
-            this.txtId = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.btnLimpiar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -229,7 +229,7 @@ namespace PrestamosEjercicio
             // 
             this.groupBox1.Controls.Add(this.btnLimpiar);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.txtId);
+            this.groupBox1.Controls.Add(this.txtIdCliente);
             this.groupBox1.Controls.Add(this.btnAlta);
             this.groupBox1.Controls.Add(this.txtCuotaTotal);
             this.groupBox1.Controls.Add(this.txtCuotaInteres);
@@ -252,6 +252,32 @@ namespace PrestamosEjercicio
             this.groupBox1.Size = new System.Drawing.Size(492, 509);
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Location = new System.Drawing.Point(365, 237);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(100, 48);
+            this.btnLimpiar.TabIndex = 20;
+            this.btnLimpiar.Text = "Limpiar Campos";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.txtLimpiar_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(246, 183);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(53, 13);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "ID Cliente";
+            // 
+            // txtIdCliente
+            // 
+            this.txtIdCliente.Location = new System.Drawing.Point(336, 180);
+            this.txtIdCliente.Name = "txtIdCliente";
+            this.txtIdCliente.Size = new System.Drawing.Size(43, 20);
+            this.txtIdCliente.TabIndex = 18;
             // 
             // lstPrestamos
             // 
@@ -279,32 +305,6 @@ namespace PrestamosEjercicio
             this.txtComision.Name = "txtComision";
             this.txtComision.Size = new System.Drawing.Size(158, 20);
             this.txtComision.TabIndex = 22;
-            // 
-            // txtId
-            // 
-            this.txtId.Location = new System.Drawing.Point(336, 180);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(43, 20);
-            this.txtId.TabIndex = 18;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(246, 183);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(18, 13);
-            this.label5.TabIndex = 19;
-            this.label5.Text = "ID";
-            // 
-            // btnLimpiar
-            // 
-            this.btnLimpiar.Location = new System.Drawing.Point(365, 237);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(100, 48);
-            this.btnLimpiar.TabIndex = 20;
-            this.btnLimpiar.Text = "Limpiar Campos";
-            this.btnLimpiar.UseVisualStyleBackColor = true;
-            this.btnLimpiar.Click += new System.EventHandler(this.txtLimpiar_Click);
             // 
             // Form1
             // 
@@ -353,7 +353,7 @@ namespace PrestamosEjercicio
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtComision;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.TextBox txtIdCliente;
         private System.Windows.Forms.Button btnLimpiar;
     }
 }

@@ -30,8 +30,8 @@ namespace PrestamosEjercicio
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            lstTipoPrestamos.DataSource = negocioTipoPrestamo.getAllTipoPrestamo();
             lstPrestamos.DataSource = negocio.getAllPrestamo();
+            lstTipoPrestamos.DataSource = negocioTipoPrestamo.getAllTipoPrestamo();
         }
 
         private void lstTipoPrestamos_SelectedIndexChanged(object sender, EventArgs e)
@@ -57,8 +57,8 @@ namespace PrestamosEjercicio
                 double monto = double.Parse(txtMonto.Text);
                 int plazo = int.Parse(txtPlazo.Text);
                 string usuario = "matias";
-                int id = int.Parse(txtId.Text);
-                Prestamo p = new Prestamo(linea, tna, plazo, monto, usuario, id,tipo);
+                int idCliente = int.Parse(txtIdCliente.Text);
+                Prestamo p = new Prestamo(linea, tna, plazo, monto, usuario, tipo, idCliente);
 
                 txtCuotaCapital.Text = p.CuotaCapital().ToString();
                 txtCuotaInteres.Text = p.CuotaInteres().ToString();
@@ -73,7 +73,7 @@ namespace PrestamosEjercicio
         private bool validarForm()
         {
             bool valido = false;
-            if(txtLinea.Text == "" || txtMonto.Text == "" || txtPlazo.Text == "" || txtTNA.Text == "" || txtId.Text == "")
+            if(txtLinea.Text == "" || txtMonto.Text == "" || txtPlazo.Text == "" || txtTNA.Text == "" || txtIdCliente.Text == "")
             {
                 valido = false;
             } else
@@ -89,7 +89,7 @@ namespace PrestamosEjercicio
             txtComision.Text = "";
             txtCuotaCapital.Text = "";
             txtCuotaInteres.Text = "";
-            txtId.Text = "";
+            txtIdCliente.Text = "";
             txtLinea.Text = "";
             txtMonto.Text = "";
             txtPlazo.Text = "";
@@ -106,13 +106,13 @@ namespace PrestamosEjercicio
                 double monto = double.Parse(txtMonto.Text);
                 int plazo = int.Parse(txtPlazo.Text);
                 string usuario = "matias";
-                int id = int.Parse(txtId.Text);
-                int idCliente = 666;
+               
+                int idCliente = int.Parse(txtIdCliente.Text);
 
-                tipo = new TipoPrestamo(linea, tna, id);
-                Prestamo p = new Prestamo(linea, tna, plazo, monto, usuario, id,tipo);
+                tipo = new TipoPrestamo(linea, tna);
+                Prestamo p = new Prestamo(linea, tna, plazo, monto, usuario, tipo, idCliente);
 
-                TransactionResult tr = negocio.insertar(id, tna, linea, plazo, idCliente, monto, usuario, tipo);
+                TransactionResult tr = negocio.insertar(tna, linea, plazo, idCliente, monto, usuario, tipo);
             } catch (PrestamoExistenteException ex)
             {
                 MessageBox.Show(ex.Message);

@@ -12,7 +12,7 @@ namespace PrestamosEjercicio.CapaDatos
     public class PrestamoMapper
     {
 
-        public List<Prestamo> TraerPrestamos(int registro = 1)
+        public List<Prestamo> TraerPrestamos(int registro = 887758)
         {
             string json2 = WebHelper.Get("prestamo/" + registro);
             List<Prestamo> lst = MapList(json2);
@@ -52,7 +52,7 @@ namespace PrestamosEjercicio.CapaDatos
         private NameValueCollection ReverseMap(Prestamo prestamo)
         {
             NameValueCollection p = new NameValueCollection();
-            p.Add("id", prestamo.Id.ToString());
+            p.Add("idCliente", prestamo.IdCliente.ToString());
             p.Add("Linea", prestamo.Linea.ToString());
             p.Add("TNA", prestamo.TNA1.ToString());
             p.Add("Plazo", prestamo.Plazo.ToString());

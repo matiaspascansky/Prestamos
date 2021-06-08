@@ -13,18 +13,19 @@ namespace PrestamosEjercicio.Entidades
         private int plazo;
         private double monto;
         private string usuario;
-        private int id;
         TipoPrestamo tipo;
+        private int idCliente;
+        private int id;
 
-        public Prestamo(string linea, double TNA, int plazo, double monto, string usuario, int id, TipoPrestamo tipoPre)
+        public Prestamo(string linea, double TNA, int plazo, double monto, string usuario, TipoPrestamo tipoPre, int idCliente)
         {
             this.linea = linea;
             this.TNA = TNA;
             this.plazo = plazo;
             this.monto = monto;
             this.usuario = usuario;
-            this.id = id;
             this.Tipo = tipoPre;
+            this.idCliente = idCliente;
         }
 
         public string Linea { get => linea; set => linea = value; }
@@ -32,8 +33,9 @@ namespace PrestamosEjercicio.Entidades
         public int Plazo { get => plazo; set => plazo = value; }
         public double Monto { get => monto; set => monto = value; }
         public string Usuario { get => usuario; set => usuario = value; }
-        public int Id { get => id; set => id = value; }
         public TipoPrestamo Tipo { get => tipo; set => tipo = value; }
+        public int IdCliente { get => idCliente; set => idCliente = value; }
+        public int Id { get => id;}
 
         public double CuotaCapital()
         {
