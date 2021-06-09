@@ -59,11 +59,11 @@ namespace PrestamosEjercicio.CapaDatos
             n.Add("Linea", prestamo.Linea);
             n.Add("TNA", prestamo.TNA1.ToString());
             n.Add("Cuota", prestamo.Cuota().ToString("0.00"));
-            n.Add("idTipo", prestamo.Tipo.ToString());
+            n.Add("idTipo", prestamo.Tipo.Id.ToString());
             n.Add("Usuario", "887758");
-           
+            n.Add("idCliente", "887758");
 
-      
+
             return n;
         }
 

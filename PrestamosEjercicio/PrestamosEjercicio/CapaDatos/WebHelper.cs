@@ -30,7 +30,7 @@ namespace PrestamosEjercicio.CapaDatos
             var responseString = client.DownloadString(uri);
 
             return responseString;
-        }
+        }   
 
         public static string Post(string url, NameValueCollection parametros)
         {
