@@ -61,10 +61,9 @@ namespace PrestamosEjercicio.CapaDatos
             n.Add("Cuota", prestamo.Cuota().ToString("0.00"));
             n.Add("idTipo", prestamo.Tipo.ToString());
             n.Add("Usuario", "887758");
-            n.Add("idCliente", "500");
+           
 
-
-
+      
             return n;
         }
 
