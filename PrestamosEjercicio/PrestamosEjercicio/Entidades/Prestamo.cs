@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Serialization;
 
 namespace PrestamosEjercicio.Entidades
 {
+    [DataContract]
     public class Prestamo
     {
         private string linea;
@@ -26,12 +28,22 @@ namespace PrestamosEjercicio.Entidades
             this.Tipo = tipoPre;
         }
 
+        public Prestamo()
+        {
+
+        }
+        [DataMember(Name = "Linea")]
         public string Linea { get => linea; set => linea = value; }
+        [DataMember(Name = "TNA")]
         public double TNA1 { get => TNA; set => TNA = value; }
+        [DataMember(Name = "Plazo")]
         public int Plazo { get => plazo; set => plazo = value; }
+        [DataMember(Name = "Monto")]
         public double Monto { get => monto; set => monto = value; }
+        [DataMember(Name = "Usuario")]
         public string Usuario { get => usuario; set => usuario = value; }
         public TipoPrestamo Tipo { get => tipo; set => tipo = value; }
+        [DataMember(Name = "id")]
         public int Id { get => id;}
 
         public double CuotaCapital()

@@ -28,7 +28,7 @@ namespace PrestamosEjercicio.CapaDatos
 
         public TransactionResult Insertar(Prestamo prestamo)
         {
-            NameValueCollection obj = ReverseMap(prestamo);
+            NameValueCollection obj = reverseMapper(prestamo);
 
             string json = WebHelper.Post("prestamo", obj);
 
@@ -49,19 +49,23 @@ namespace PrestamosEjercicio.CapaDatos
             return prestamo;
         }
 
-        private NameValueCollection ReverseMap(Prestamo prestamo)
+
+        private NameValueCollection reverseMapper(Prestamo prestamo)
         {
-            NameValueCollection p = new NameValueCollection();
-            p.Add("TNA", prestamo.TNA1.ToString("0.00"));
-            p.Add("Plazo", prestamo.Plazo.ToString());
-            p.Add("idTipo", prestamo.Tipo.Id.ToString());
-            p.Add("Monto", prestamo.Monto.ToString("0.00"));
-            p.Add("Cuota", prestamo.Cuota().ToString("0.00"));
-            p.Add("Usuario", "887758");
-            p.Add("Linea", prestamo.Linea.ToString());
+
+            NameValueCollection n = new NameValueCollection();
+            n.Add("Plazo", prestamo.Plazo.ToString());
+            n.Add("Monto", prestamo.Monto.ToString("0.00"));
+            n.Add("Linea", prestamo.Linea);
+            n.Add("TNA", prestamo.TNA1.ToString());
+            n.Add("Cuota", prestamo.Cuota().ToString("0.00"));
+            n.Add("idTipo", prestamo.Tipo.ToString());
+            n.Add("Usuario", "887758");
+            n.Add("idCliente", "500");
 
 
-            return p;
+
+            return n;
         }
 
 
